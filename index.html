@@ -1,0 +1,182 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Lena I love you alots ❤️</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="wrap">
+    <h1>Lena I love you alots ❤️</h1>
+    <p class="tag">These tulips bloom forever for you.</p>
+
+    <div class="card">
+      <div class="garden">
+        <!-- hearts layer -->
+        <div class="hearts" id="hearts-layer"></div>
+
+        <!-- SCENE -->
+        <svg id="scene" width="460" height="540" viewBox="-230 -140 460 560" aria-label="Tulip bouquet that blooms with sky, birds and sun" role="img">
+          <defs>
+            <linearGradient id="skyGrad" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0%" stop-color="var(--sky1)"/>
+              <stop offset="100%" stop-color="var(--sky2)"/>
+            </linearGradient>
+          </defs>
+          <!-- sky -->
+          <rect x="-230" y="-160" width="460" height="560" fill="url(#skyGrad)" />
+
+          <!-- sun -->
+          <g class="sun-group" transform="translate(-180,-90)">
+            <circle r="24" fill="var(--sun)" />
+            <g>
+              <line x1="0" y1="-40" x2="0" y2="-60" stroke="var(--sun)" stroke-width="5" stroke-linecap="round"/>
+              <line x1="28" y1="-28" x2="42" y2="-42" stroke="var(--sun)" stroke-width="5" stroke-linecap="round"/>
+              <line x1="40" y1="0" x2="60" y2="0" stroke="var(--sun)" stroke-width="5" stroke-linecap="round"/>
+              <line x1="28" y1="28" x2="42" y2="42" stroke="var(--sun)" stroke-width="5" stroke-linecap="round"/>
+              <line x1="0" y1="40" x2="0" y2="60" stroke="var(--sun)" stroke-width="5" stroke-linecap="round"/>
+              <line x1="-28" y1="28" x2="-42" y2="42" stroke="var(--sun)" stroke-width="5" stroke-linecap="round"/>
+              <line x1="-40" y1="0" x2="-60" y2="0" stroke="var(--sun)" stroke-width="5" stroke-linecap="round"/>
+              <line x1="-28" y1="-28" x2="-42" y2="-42" stroke="var(--sun)" stroke-width="5" stroke-linecap="round"/>
+            </g>
+          </g>
+
+          <!-- birds -->
+          <g class="birds" transform="translate(-120,-40)">
+            <path d="M0 0 q 8 -8 16 0" fill="none" stroke="#2d2a32" stroke-width="3" stroke-linecap="round"/>
+            <path d="M28 6 q 8 -8 16 0" fill="none" stroke="#2d2a32" stroke-width="3" stroke-linecap="round"/>
+            <path d="M64 -4 q 8 -8 16 0" fill="none" stroke="#2d2a32" stroke-width="3" stroke-linecap="round"/>
+          </g>
+
+          <!-- grass -->
+          <g transform="translate(0,240)">
+            <rect x="-240" y="0" width="480" height="140" fill="var(--grass)"/>
+          </g>
+
+          <!-- ===== tulip bunch (left / center / right) ===== -->
+          <!-- left tulip -->
+          <g class="flower" transform="translate(-80,40) scale(1.05)">
+            <path class="stem anim-stem" d="M0 40 C -12 140, 8 220, 0 300" fill="none" stroke="var(--stem)" stroke-width="7" stroke-linecap="round"/>
+            <g transform="translate(-10,170)"><path class="leaf anim-leaf" fill="var(--leaf)" d="M0 0 C -48 -6, -42 40, 0 30 C 46 20, 32 -8, 0 0 Z"/></g>
+            <g transform="translate(8,228) scale(-1,1)"><path class="leaf anim-leaf" fill="var(--leaf)" d="M0 0 C -48 -6, -42 40, 0 30 C 46 20, 32 -8, 0 0 Z"/></g>
+            <g transform="translate(0,40)">
+              <path class="tulip-petal anim-petal" d="M0,0 C 22,-14 22,-46 0,-72 C -22,-46 -22,-14 0,0 Z" fill="var(--tulip-purple)"/>
+              <path class="tulip-petal anim-petal" d="M-2,-2 C -22,-10 -22,-50 0,-66 C 16,-46 18,-14 0,0 Z" fill="var(--tulip-pink)"/>
+              <path class="tulip-petal anim-petal" d="M2,-2 C 22,-10 22,-50 0,-66 C -16,-46 -18,-14 0,0 Z" fill="var(--tulip-red)"/>
+            </g>
+          </g>
+
+          <!-- center tulip (tallest) -->
+          <g class="flower" transform="translate(0,10) scale(1.25)">
+            <path class="stem anim-stem" d="M0 40 C -10 150, 10 240, 0 320" fill="none" stroke="var(--stem)" stroke-width="8" stroke-linecap="round"/>
+            <g transform="translate(-12,190)"><path class="leaf anim-leaf" fill="var(--leaf)" d="M0 0 C -60 -6, -54 48, 0 36 C 58 24, 40 -10, 0 0 Z"/></g>
+            <g transform="translate(10,250) scale(-1,1)"><path class="leaf anim-leaf" fill="var(--leaf)" d="M0 0 C -60 -6, -54 48, 0 36 C 58 24, 40 -10, 0 0 Z"/></g>
+            <g transform="translate(0,40)">
+              <path class="tulip-petal anim-petal" d="M0,0 C 26,-16 26,-56 0,-86 C -26,-56 -26,-16 0,0 Z" fill="var(--tulip-yellow)"/>
+              <path class="tulip-petal anim-petal" d="M-2,-2 C -26,-12 -26,-60 0,-80 C 18,-56 20,-16 0,0 Z" fill="var(--tulip-orange)"/>
+              <path class="tulip-petal anim-petal" d="M2,-2 C 26,-12 26,-60 0,-80 C -18,-56 -20,-16 0,0 Z" fill="var(--tulip-red)"/>
+            </g>
+          </g>
+
+          <!-- right tulip -->
+          <g class="flower" transform="translate(82,30) scale(1.1)">
+            <path class="stem anim-stem" d="M0 40 C -8 140, 8 220, 0 300" fill="none" stroke="var(--stem)" stroke-width="7" stroke-linecap="round"/>
+            <g transform="translate(-10,200)"><path class="leaf anim-leaf" fill="var(--leaf)" d="M0 0 C -50 -6, -44 44, 0 32 C 48 22, 34 -8, 0 0 Z"/></g>
+            <g transform="translate(8,248) scale(-1,1)"><path class="leaf anim-leaf" fill="var(--leaf)" d="M0 0 C -50 -6, -44 44, 0 32 C 48 22, 34 -8, 0 0 Z"/></g>
+            <g transform="translate(0,40)">
+              <path class="tulip-petal anim-petal" d="M0,0 C 22,-14 22,-46 0,-72 C -22,-46 -22,-14 0,0 Z" fill="var(--tulip-pink)"/>
+              <path class="tulip-petal anim-petal" d="M-2,-2 C -22,-10 -22,-50 0,-66 C 16,-46 18,-14 0,0 Z" fill="var(--tulip-purple)"/>
+              <path class="tulip-petal anim-petal" d="M2,-2 C 22,-10 22,-50 0,-66 C -16,-46 -18,-14 0,0 Z" fill="var(--tulip-orange)"/>
+            </g>
+          </g>
+        </svg>
+      </div>
+
+      <div class="love">💌 forever and always</div>
+
+      <div class="actions">
+        <button id="replay">Bloom again 🌼</button>
+      </div>
+      <div class="note">Tip: Add this to your home screen so it works offline.</div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
+
+/* style.css */
+:root{
+  --sky1:#bde7ff; --sky2:#eaf7ff; --text:#2d2a32;
+  --stem:#3fa34d; --leaf:#48b26b; --grass:#77dd77; --sun:#ffe066;
+  --tulip-red:#ff4b5c; --tulip-pink:#ff86c4; --tulip-yellow:#ffd166; --tulip-purple:#9b6cff; --tulip-orange:#ff9a3d;
+  --shadow:0 10px 30px rgba(0,0,0,.08);
+}
+*{box-sizing:border-box}
+html,body{height:100%}
+body{margin:0;font-family:ui-rounded,system-ui,-apple-system,Segoe UI,Roboto,"Helvetica Neue",Noto Sans,"Apple Color Emoji","Segoe UI Emoji";color:var(--text);background:linear-gradient(180deg,var(--sky1),var(--sky2) 60%,#ffffff 100%);display:grid;place-items:center;overflow:hidden}
+.wrap{width:min(860px,100%);padding:24px;text-align:center}
+h1{margin:0 0 8px;font-weight:800;font-size:clamp(26px,4vw,44px)}
+.tag{margin:0 0 18px;opacity:.8;font-size:1.1rem}
+.love{font-size:1.2rem;font-weight:700;margin-top:16px;color:#d62828;text-shadow:0 2px 6px rgba(0,0,0,.15)}
+.card{background:#fff;border-radius:24px;padding:24px;box-shadow:var(--shadow)}
+.garden{position:relative;height:560px;display:grid;place-items:end center}
+svg{overflow:visible}
+.actions{margin-top:16px;display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+button{appearance:none;border:0;background:#111;color:#fff;padding:12px 16px;border-radius:999px;cursor:pointer;font-weight:700;box-shadow:var(--shadow)}
+
+/* animations */
+.tulip-petal{opacity:0;transform-origin:0 80px;transform:translateY(20px) scaleY(.1)}
+@keyframes bloomUp{to{opacity:1;transform:translateY(0) scaleY(1)}}
+.stem{stroke-dasharray:520;stroke-dashoffset:520}
+@keyframes draw{to{stroke-dashoffset:0}}
+.leaf{opacity:0;transform:scale(.9);transform-origin:0 0}
+@keyframes popLeaf{to{opacity:1;transform:scale(1)}}
+.sun-group{transform-origin:-180px -80px;animation:spin 18s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+.birds{animation:fly 14s linear infinite alternate}
+@keyframes fly{from{transform:translateX(-160px)}to{transform:translateX(160px)}}
+
+/* hearts */
+.hearts{position:absolute;inset:0;pointer-events:none;overflow:visible}
+.heart{position:absolute;font-size:24px;opacity:0;filter:drop-shadow(0 6px 10px rgba(0,0,0,.15))}
+@keyframes floatUp{0%{transform:translate(var(--x,0),var(--y,0)) scale(var(--s,1));opacity:.9}80%{opacity:1}100%{transform:translate(calc(var(--x,0) + var(--drift,0px)),-260px) scale(calc(var(--s,1) * 1.15));opacity:0}}
+
+
+// script.js
+function restart(el,anim){el.style.animation='none';void el.offsetWidth;el.style.animation=anim;}
+function bloom(){
+  document.querySelectorAll('.anim-stem').forEach((s,i)=>{s.style.strokeDashoffset=520;restart(s,`draw 1.6s ${0.05*i}s forwards ease`)});
+  document.querySelectorAll('.anim-leaf').forEach((l,i)=>{l.style.opacity=0;restart(l,`popLeaf .6s ${0.3+i*0.06}s forwards ease-out`)});
+  document.querySelectorAll('.anim-petal').forEach((p,i)=>{p.style.opacity=0;restart(p,`bloomUp .9s ${0.45+i*0.15}s forwards cubic-bezier(.2,.8,.2,1.2)`)});
+}
+function spawnHearts(count=28){
+  const layer=document.getElementById('hearts-layer');
+  const emojis=['❤️','💖','💕','💗','💘'];
+  for(let i=0;i<count;i++){
+    const el=document.createElement('div');
+    el.className='heart';
+    el.textContent=emojis[Math.floor(Math.random()*emojis.length)];
+    const startX=(Math.random()*140-70);
+    const startY=220+Math.random()*20;
+    const drift=(Math.random()*160-80)+'px';
+    const scale=(0.7+Math.random()*0.9).toFixed(2);
+    const delay=(Math.random()*0.6).toFixed(2);
+    const dur=(2.4+Math.random()*1.6).toFixed(2);
+    el.style.left='50%'; el.style.bottom='0';
+    el.style.setProperty('--x',startX+'px');
+    el.style.setProperty('--y',startY+'px');
+    el.style.setProperty('--drift',drift);
+    el.style.setProperty('--s',scale);
+    el.style.animation=`floatUp ${dur}s ${delay}s forwards ease-out`;
+    layer.appendChild(el);
+    setTimeout(()=>el.remove(),(parseFloat(dur)+parseFloat(delay))*1000+150);
+  }
+}
+function bloomWithHearts(){bloom();spawnHearts(28)}
+document.getElementById('replay').addEventListener('click',bloomWithHearts);
+// start once
+bloomWithHearts();
